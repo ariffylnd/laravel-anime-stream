@@ -35,8 +35,12 @@
   @include('main.partials.header')
   <!-- Header End -->
 
+  <!-- Breadcrumb Begin -->
+  @yield('breadcrumb')
+  <!-- Breadcrumb End -->
+
   <!-- Hero Section Begin -->
-  @include('main.partials.hero')
+  @yield('hero')
   <!-- Hero Section End -->
 
   <!-- Product Section Begin -->

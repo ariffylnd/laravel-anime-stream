@@ -1,5 +1,9 @@
 @extends('main.layouts.main')
 
+@section('hero')
+@include('main.partials.hero')
+@endsection
+
 @section('content')
 <div class="row">
   <div class="col-lg-8">
