@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\JikanApi;
 use Illuminate\Http\Request;
 
 class AnimeController extends Controller
 {
+    private JikanApi $jikanApi;
+
+    public function __construct(JikanApi $jikanApi)
+    {
+        $this->jikanApi = $jikanApi;
+    }
+
     /**
      * Display a listing of the resource.
      */
