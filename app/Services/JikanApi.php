@@ -34,4 +34,21 @@ class JikanApi
 
     return null;
   }
+
+  public function getTopAnime(?string $type = null, ?string $filter = null, ?int $limit = null): ?array
+  {
+    $query = [
+      'type' => $type,
+      'filter' => $filter,
+      'limit' => $limit ?: 10,
+    ];
+
+    $response = Http::get($this->baseUrl . '/top/anime', $query);
+
+    if ($response->ok()) {
+      return $response->json('data');
+    }
+
+    return null;
+  }
 }
